@@ -1,7 +1,0 @@
-Tony Narlock's tmux configuration (http://github.com/tony)
-
-Tmux is a terminal multiplexer. Home page: http://tmux.sourceforge.net/
-
-
-This config has support for tmux-mem-cpu.
- http://github.com/thewtex/tmux-mem-cpu-load

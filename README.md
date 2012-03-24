@@ -28,7 +28,8 @@ Commands
   * `Control + b` then `o` to rotate panes
   * `Control + b` then `;` to go to last panel
 
-### Beyond your first window
+
+  Beyond your first window
 
   * `Control + b` then `c` to create a new window
   * `Control + b` then `n` to next window

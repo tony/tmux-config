@@ -9,6 +9,7 @@ This config has support for [tmux-mem-cpu](http://github.com/thewtex/tmux-mem-cp
 
 Installation
 ------------
+
   * `git clone https://github.com/tony/tmux-config.git ~/.tmux-tony`
   * `ln -s ~/.tmux-tony/.tmux.conf ~/.scrotwm.conf`
   * `cd ~/.tmux-tony`
@@ -19,6 +20,7 @@ Installation
 
 Commands
 --------
+
   * `Control + b` before any command
   * `Control + b` then `?` to bring up list of keyboard shortcuts
   * `Control + b` then `"` to split window
@@ -26,7 +28,8 @@ Commands
   * `Control + b` then `o` to rotate panes
   * `Control + b` then `;` to go to last panel
 
-## Beyond your first window
+### Beyond your first window
+
   * `Control + b` then `c` to create a new window
   * `Control + b` then `n` to next window
   * `Control + b` then `p` to previous window

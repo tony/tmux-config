@@ -12,7 +12,11 @@ This sample tmux configuration should get you going.
 Installation
 ------------
 
-  Download: `git clone https://github.com/tony/tmux-config.git ~/.tmux-tony`
+  Download:
+
+```bash
+git clone https://github.com/tony/tmux-config.git ~/.tmux-tony
+```
 
   Copy tmux config to home:
 

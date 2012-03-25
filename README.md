@@ -12,17 +12,67 @@ This sample tmux configuration should get you going.
 Installation
 ------------
 
-  * `git clone https://github.com/tony/tmux-config.git ~/.tmux-tony` download
-  * `ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf` copy tmux config to home
-  * `cd ~/.tmux-tony` cd to config
-  * `git submodule init` setup
-  * `git submodule update` download
-  * `cd ~/.tmux-tony/vendor/tmux-mem-cpu-load` change dir to tmux-mem-cpu-load
-  * `cmake .` general make file
-  * `make` compile
-  * `sudo make install` move our binary. it will be at `/usr/local/bin/tmux-mem-cpu-load`
-  * `cd ~` go home
-  * `tmux source-file ~/.tmux.conf` update config
+  Download: `git clone https://github.com/tony/tmux-config.git ~/.tmux-tony`
+
+  Copy tmux config to home:
+
+```bash
+ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf
+```
+
+  Go to config dir:
+
+```bash
+cd ~/.tmux-tony
+```
+
+  Prep ourself to download submodule:
+
+```bash
+git submodule init
+```
+
+  Download submodule:
+
+```bash
+git submodule update
+```
+
+  Change dir to tmux-mem-cpu-load:
+```bash
+cd ~/.tmux-tony/vendor/tmux-mem-cpu-load
+```
+
+  General make file:
+```bash
+cmake .
+```
+
+  Compile
+```bash
+make
+```
+
+  Move our binary. It will be at `/usr/local/bin/tmux-mem-cpu-load`
+
+```bash
+sudo make install
+```
+
+  Go home:
+
+```bash
+cd ~
+```
+
+  Update config:
+
+```bash
+tmux source-file ~/.tmux.conf
+```
+
+Start tmux
+----------
 
   To start a session:
 
@@ -34,22 +84,25 @@ Installation
 
   To reload config file
 
-  `<prefix>:` (which is Ctrl-B or Ctrl-A if you overidden it) then `source-file ~/.tmux.conf`
+  `<Control + b>:` (which could Ctrl-B or Ctrl-A if you overidden it) then `source-file ~/.tmux.conf`
 
 Commands
 --------
 
-  * `Control + b` before any command
-  * `Control + b` then `?` to bring up list of keyboard shortcuts
-  * `Control + b` then `"` to split window
-  * `Control + b` then `<Space>` to change pane arrangement
-  * `Control + b` then `o` to rotate panes
-  * `Control + b` then `;` to go to last panel
+  Our prefix/leader key is `Control + a` now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
 
+  * `Control + a` before any command
+  * `Control + a` then `?` to bring up list of keyboard shortcuts
+  * `Control + a` then `"` to split window
+  * `Control + a` then `<Space>` to change pane arrangement
+  * `Control + a` then `o` to rotate panes
+  * `Control + a` then `h`, `j`, `k`, `l` to move left, down, up, right. Respectively. (vim hjkl)
+  * `Control + a` then `;` to go to last panel
 
-  Beyond your first window
+  Beyond your first window:
 
-  * `Control + b` then `c` to create a new window
-  * `Control + b` then `n` to next window
-  * `Control + b` then `p` to previous window
-  * `Control + b` then `&` to kill window
+  * `Control + a` then `c` to create a new window
+  * `Control + a` then `n` to next window
+  * `Control + a` then `p` to previous window
+  * `Control + a` then `[0-9]` move to window number
+  * `Control + a` then `&` to kill window

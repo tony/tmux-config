@@ -39,21 +39,24 @@ git submodule update
 ```
 
   Change dir to tmux-mem-cpu-load:
+
 ```bash
 cd ~/.tmux-tony/vendor/tmux-mem-cpu-load
 ```
 
   General make file:
+
 ```bash
 cmake .
 ```
 
-  Compile
+  Compile our binary:
+
 ```bash
 make
 ```
 
-  Move our binary. It will be at `/usr/local/bin/tmux-mem-cpu-load`
+  Install our binary to `/usr/local/bin/tmux-mem-cpu-load`:
 
 ```bash
 sudo make install

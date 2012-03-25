@@ -7,16 +7,34 @@
 
 This config has support for [tmux-mem-cpu](http://github.com/thewtex/tmux-mem-cpu-load).
 
+This sample tmux configuration should get you going.
+
 Installation
 ------------
 
-  * `git clone https://github.com/tony/tmux-config.git ~/.tmux-tony`
-  * `ln -s ~/.tmux-tony/.tmux.conf ~/.scrotwm.conf`
-  * `cd ~/.tmux-tony`
-  * `cmake .`
-  * `make`
-  * `sudo make install`
-  * `tmux`
+  * `git clone https://github.com/tony/tmux-config.git ~/.tmux-tony` download
+  * `ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf` copy tmux config to home
+  * `cd ~/.tmux-tony` cd to config
+  * `git submodule init` setup
+  * `git submodule update` download
+  * `cd ~/.tmux-tony/vendor/tmux-mem-cpu-load` change dir to tmux-mem-cpu-load
+  * `cmake .` general make file
+  * `make` compile
+  * `sudo make install` move our binary. it will be at `/usr/local/bin/tmux-mem-cpu-load`
+  * `cd ~` go home
+  * `tmux source-file ~/.tmux.conf` update config
+
+  To start a session:
+
+  `tmux`
+
+  To reattach a previous session:
+
+  `tmux attach`
+
+  To reload config file
+
+  `<prefix>:` (which is Ctrl-B or Ctrl-A if you overidden it) then `source-file ~/.tmux.conf`
 
 Commands
 --------

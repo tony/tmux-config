@@ -1,9 +1,4 @@
-# Tony Narlock's tmux configuration
-
-* Github: http://www.github.com/tony
-* Website: http://www.git-pull.com
-
-[Tmux](http://tmux.sourceforge.net/) is a terminal multiplexer.
+[Tmux](http://tmux.sourceforge.net/) is a terminal multiplexer. This configuration is tested with tmux 1.5 and 1.6.
 
 This config has support for [tmux-mem-cpu](http://github.com/thewtex/tmux-mem-cpu-load).
 
@@ -113,3 +108,9 @@ Commands
   * `Control + a` then `p` to previous window
   * `Control + a` then `[0-9]` move to window number
   * `Control + a` then `&` to kill window
+
+
+by Tony Narlock (tony@git-pull.com)
+
+* Github: http://www.github.com/tony
+* Website: http://www.git-pull.com

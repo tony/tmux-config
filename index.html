@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Example tmux configuration by tony</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/tony/tmux-config">Fork On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/tony/tmux-config/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/tony/tmux-config/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Example tmux configuration</h1>
+          <p>Starter config with screen + vim key-bindings, system stat, cpu load bar.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/tony">tony</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p><a href="http://tmux.sourceforge.net/">Tmux</a> is a terminal multiplexer. Tested with tmux 1.5 and 1.6.</p>
+
+<p>This config has support for <a href="http://github.com/thewtex/tmux-mem-cpu-load">tmux-mem-cpu</a>.</p>
+
+<p>Prefix mapped to Ctrl-A for <code>screen</code> users.</p>
+
+<h2>Installation</h2>
+
+<p>Download:</p>
+
+<div class="highlight">
+<pre>git clone <a href="https://github.com/tony/tmux-config.git">https://github.com/tony/tmux-config.git</a> ~/.tmux-tony
+</pre>
+</div>
+
+
+<p>Copy tmux config to home:</p>
+
+<div class="highlight">
+<pre>ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf
+</pre>
+</div>
+
+
+<p>Go to config dir:</p>
+
+<div class="highlight">
+<pre><span class="nb">cd</span> ~/.tmux-tony
+</pre>
+</div>
+
+
+<p>Prep ourself to download submodule:</p>
+
+<div class="highlight">
+<pre>git submodule init
+</pre>
+</div>
+
+
+<p>Download submodule:</p>
+
+<div class="highlight">
+<pre>git submodule update
+</pre>
+</div>
+
+
+<p>Change dir to tmux-mem-cpu-load:</p>
+
+<div class="highlight">
+<pre><span class="nb">cd</span> ~/.tmux-tony/vendor/tmux-mem-cpu-load
+</pre>
+</div>
+
+
+<p>General make file:</p>
+
+<div class="highlight">
+<pre>cmake .
+</pre>
+</div>
+
+
+<p>Compile our binary:</p>
+
+<div class="highlight">
+<pre>make
+</pre>
+</div>
+
+
+<p>Install our binary to <code>/usr/local/bin/tmux-mem-cpu-load</code>:</p>
+
+<div class="highlight">
+<pre>sudo make install
+</pre>
+</div>
+
+
+<p>Go home:</p>
+
+<div class="highlight">
+<pre><span class="nb">cd</span> ~
+</pre>
+</div>
+
+
+<p>Update config:</p>
+
+<div class="highlight">
+<pre>tmux <span class="nb">source</span>-file ~/.tmux.conf
+</pre>
+</div>
+
+
+<h2>Start tmux</h2>
+
+<p>To start a session:</p>
+
+<p><code>tmux</code></p>
+
+<p>To reattach a previous session:</p>
+
+<p><code>tmux attach</code></p>
+
+<p>To reload config file</p>
+
+<p><code>&lt;Control + b&gt;:</code> (which could Ctrl-B or Ctrl-A if you overidden it) then <code>source-file ~/.tmux.conf</code></p>
+
+<h2>Commands</h2>
+
+<p>Our prefix/leader key is <code>Control + a</code> now (just like the <code>screen</code> multiplexer). This sequence must be typed before any tmux shortcut.</p>
+
+<ul>
+<li>
+<code>Control + a</code> before any command</li>
+<li>
+<code>Control + a</code> then <code>?</code> to bring up list of keyboard shortcuts</li>
+<li>
+<code>Control + a</code> then <code>"</code> to split window</li>
+<li>
+<code>Control + a</code> then <code>&lt;Space&gt;</code> to change pane arrangement</li>
+<li>
+<code>Control + a</code> then <code>o</code> to rotate panes</li>
+<li>
+<code>Control + a</code> then <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> to move left, down, up, right. Respectively. (vim hjkl)</li>
+<li>
+<code>Control + a</code> then <code>;</code> to go to last panel</li>
+</ul><p>Beyond your first window:</p>
+
+<ul>
+<li>
+<code>Control + a</code> then <code>c</code> to create a new window</li>
+<li>
+<code>Control + a</code> then <code>n</code> to next window</li>
+<li>
+<code>Control + a</code> then <code>p</code> to previous window</li>
+<li>
+<code>Control + a</code> then <code>[0-9]</code> move to window number</li>
+<li>
+<code>Control + a</code> then <code>&amp;</code> to kill window</li>
+</ul><p>by Tony Narlock (tony@git-pull.com)</p>
+
+<ul>
+<li>Github: <a href="http://www.github.com/tony">http://www.github.com/tony</a></li>
+<li>Website: <a href="http://www.git-pull.com">http://www.git-pull.com</a></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>

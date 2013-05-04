@@ -25,6 +25,13 @@ ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf
 cd ~/.tmux-tony
 ```
 
+Stats
+-----
+
+### tmux-mem-cpu-load
+
+(Linux-only)
+
   Prep ourself to download submodule:
 
 ```bash
@@ -71,6 +78,28 @@ cd ~
 
 ```bash
 tmux source-file ~/.tmux.conf
+```
+
+### basic-cpu-and-memory.tmux
+
+(Cross platform, tested with python 2.7+)
+
+  install `psutil`
+
+```bash
+sudo pip install psutil
+```
+
+  copy ~/.tmux/vendor/basic-cpu-and-memory.tmux to bin
+
+```bash
+sudo cp ~/.tmux/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load
+```
+
+  make executable
+
+```bash
+sudo chmod +x /usr/local/bin/tmux-mem-cpu-load
 ```
 
 Start tmux

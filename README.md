@@ -90,10 +90,10 @@ tmux source-file ~/.tmux.conf
 sudo pip install psutil
 ```
 
-  copy ~/.tmux/vendor/basic-cpu-and-memory.tmux to bin
+  copy ~/.tmux-tony/vendor/basic-cpu-and-memory.tmux to bin
 
 ```bash
-sudo cp ~/.tmux/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load
+sudo cp ~/.tmux-tony/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load
 ```
 
   make executable

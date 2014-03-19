@@ -87,7 +87,7 @@ tmux source-file ~/.tmux.conf
   install `psutil`
 
 ```bash
-sudo pip install psutil
+sudo pip install psutil==1.2.1
 ```
 
   copy ~/.tmux-tony/vendor/basic-cpu-and-memory.tmux to bin

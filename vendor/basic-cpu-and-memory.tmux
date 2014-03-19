@@ -9,6 +9,9 @@ Dash-meter inspired by tmux-mem-cpu
 and code from psutil top.py.
 
 From https://github.com/zaiste/tmuxified
+
+Changes by Tony Narlock <tony@git-pull.com> at
+https://github.com/tony/tmux-config.
 """
 
 import os
@@ -26,7 +29,10 @@ def get_dashes(perc):
 
 def info():
     mem = psutil.virtual_memory()
-    memused = mem.used - mem.cached
+    if hasattr(mem, 'cached'):
+        memused = mem.used - mem.cached
+    else:
+        memused = mem.used
 
     cpu_dashes, cpu_empty_dashes = get_dashes(psutil.cpu_percent(interval=0.1))
     line = "%s/%sMB [%s%s] %s%%" % (

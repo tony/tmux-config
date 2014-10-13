@@ -35,7 +35,7 @@ def info():
         memused = mem.used
 
     cpu_dashes, cpu_empty_dashes = get_dashes(psutil.cpu_percent(interval=0.1))
-    line = "%s/%sMB [%s%s] %s%%" % (
+    line = "%s/%sMB [%s%s] %5s%%" % (
         str(int(memused / 1024 / 1024)),
         str(int(mem.total / 1024 / 1024)),
         cpu_dashes, cpu_empty_dashes,

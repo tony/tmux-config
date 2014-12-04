@@ -74,6 +74,12 @@ sudo make install
 cd ~
 ```
 
+  Launch tmux:
+```
+tmux
+```
+  And press `Control + a` then `d` to go back to the terminal.
+
   Update config:
 
 ```bash

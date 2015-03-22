@@ -4,6 +4,9 @@ This config has support for [tmux-mem-cpu](http://github.com/thewtex/tmux-mem-cp
 
 Prefix mapped to Ctrl-A for `screen` users.
 
+Want to manage your common tmux sessions through a JSON or YAML config file? Try 
+[tmuxp](https://github.com/tony/tmuxp).
+
 Installation
 ------------
 

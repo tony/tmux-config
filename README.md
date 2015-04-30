@@ -4,9 +4,6 @@ This config has support for [tmux-mem-cpu](http://github.com/thewtex/tmux-mem-cp
 
 Prefix mapped to Ctrl-A for `screen` users.
 
-Want to manage your common tmux sessions through a JSON or YAML config file? Try 
-[tmuxp](https://github.com/tony/tmuxp).
-
 Installation
 ------------
 
@@ -149,8 +146,16 @@ Commands
   * `Control + a` then `[0-9]` move to window number
   * `Control + a` then `&` to kill window
 
+More configs / Tools
+--------------------
+
+* *Save / Load your tmux workspaces through JSON or YAML* with [tmuxp](https://github.com/tony/tmuxp).
+* *Clone + Synchronize your git / hg / svn projects through JSON / YAML* with [vcspull](https://github.com/tony/vcspull).
+* *Modular, Lazy-loading vim configuration* with support for C, C++, Python, Go and Javascript with [tony/vim-config](https://github.com/tony/vim-config)
+* *Modular dot-config example* [tony/.dot-config](https://github.com/tony/.dot-config)
 
 by Tony Narlock (tony@git-pull.com)
 
 * Github: http://www.github.com/tony
 * Website: http://www.git-pull.com
+* LICENSE: MIT

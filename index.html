@@ -1,141 +1,136 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Example tmux configuration by tony</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Example tmux configuration</h1>
+      <h2 class="project-tagline">Starter config with screen + vim key-bindings, system stat, cpu load bar.</h2>
+      <a href="https://github.com/tony/tmux-config" class="btn">View on GitHub</a>
+      <a href="https://github.com/tony/tmux-config/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/tony/tmux-config/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/tony/tmux-config">Fork On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/tony/tmux-config/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/tony/tmux-config/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Example tmux configuration</h1>
-          <p>Starter config with screen + vim key-bindings, system stat, cpu load bar.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/tony">tony</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
-
-        <p><a href="http://tmux.sourceforge.net/">Tmux</a> is a terminal multiplexer. Tested with tmux 1.5 and 1.6.</p>
+    <section class="main-content">
+      <p><a href="http://tmux.sourceforge.net/">Tmux</a> is a terminal multiplexer. Tested with tmux 1.5+.</p>
 
 <p>This config has support for <a href="http://github.com/thewtex/tmux-mem-cpu-load">tmux-mem-cpu</a>.</p>
 
 <p>Prefix mapped to Ctrl-A for <code>screen</code> users.</p>
 
-<h2>Installation</h2>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Download:</p>
 
-<div class="highlight">
-<pre>git clone <a href="https://github.com/tony/tmux-config.git">https://github.com/tony/tmux-config.git</a> ~/.tmux-tony
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>git clone https://github.com/tony/tmux-config.git <span class="pl-k">~</span>/.tmux</pre></div>
 
 <p>Copy tmux config to home:</p>
 
-<div class="highlight">
-<pre>ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>ln -s <span class="pl-k">~</span>/.tmux/.tmux.conf <span class="pl-k">~</span>/.tmux.conf</pre></div>
 
 <p>Go to config dir:</p>
 
-<div class="highlight">
-<pre><span class="nb">cd</span> ~/.tmux-tony
-</pre>
-</div>
+<div class="highlight highlight-bash"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/.tmux</pre></div>
 
+<h2>
+<a id="stats" class="anchor" href="#stats" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stats</h2>
+
+<h3>
+<a id="tmux-mem-cpu-load" class="anchor" href="#tmux-mem-cpu-load" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmux-mem-cpu-load</h3>
+
+<p>(Linux-only)</p>
 
 <p>Prep ourself to download submodule:</p>
 
-<div class="highlight">
-<pre>git submodule init
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>git submodule init</pre></div>
 
 <p>Download submodule:</p>
 
-<div class="highlight">
-<pre>git submodule update
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>git submodule update</pre></div>
 
 <p>Change dir to tmux-mem-cpu-load:</p>
 
-<div class="highlight">
-<pre><span class="nb">cd</span> ~/.tmux-tony/vendor/tmux-mem-cpu-load
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/.tmux/vendor/tmux-mem-cpu-load</pre></div>
 
 <p>General make file:</p>
 
-<div class="highlight">
-<pre>cmake .
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>cmake <span class="pl-c1">.</span></pre></div>
 
 <p>Compile our binary:</p>
 
-<div class="highlight">
-<pre>make
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>make</pre></div>
 
 <p>Install our binary to <code>/usr/local/bin/tmux-mem-cpu-load</code>:</p>
 
-<div class="highlight">
-<pre>sudo make install
-</pre>
-</div>
-
+<div class="highlight highlight-bash"><pre>sudo make install</pre></div>
 
 <p>Go home:</p>
 
-<div class="highlight">
-<pre><span class="nb">cd</span> ~
-</pre>
-</div>
+<div class="highlight highlight-bash"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span></pre></div>
 
+<p>Launch tmux:</p>
+
+<pre><code>tmux
+</code></pre>
+
+<p>And press <code>Control + a</code> then <code>d</code> to go back to the terminal.</p>
 
 <p>Update config:</p>
 
-<div class="highlight">
-<pre>tmux <span class="nb">source</span>-file ~/.tmux.conf
-</pre>
-</div>
+<div class="highlight highlight-bash"><pre>tmux <span class="pl-c1">source</span>-file <span class="pl-k">~</span>/.tmux.conf</pre></div>
 
+<h3>
+<a id="basic-cpu-and-memorytmux" class="anchor" href="#basic-cpu-and-memorytmux" aria-hidden="true"><span class="octicon octicon-link"></span></a>basic-cpu-and-memory.tmux</h3>
 
-<h2>Start tmux</h2>
+<p>(Cross platform, tested with python 2.7+)</p>
+
+<p>Update March 19, 2014. Works with psutil 2.0 now.</p>
+
+<p>Install <code>psutil</code>:</p>
+
+<div class="highlight highlight-bash"><pre>sudo pip install psutil</pre></div>
+
+<p>copy <code>~/.tmux/vendor/basic-cpu-and-memory.tmux</code> to bin:</p>
+
+<div class="highlight highlight-bash"><pre>sudo cp <span class="pl-k">~</span>/.tmux/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load</pre></div>
+
+<p>make executable:</p>
+
+<div class="highlight highlight-bash"><pre>sudo chmod +x /usr/local/bin/tmux-mem-cpu-load</pre></div>
+
+<h3>
+<a id="powerline-advanced" class="anchor" href="#powerline-advanced" aria-hidden="true"><span class="octicon octicon-link"></span></a>Powerline (Advanced)</h3>
+
+<p>You can add suport for <a href="https://github.com/powerline/powerline">powerline</a> by adding these
+to your <code>~/.tmux.conf</code>. Be sure to grab and install <a href="https://github.com/powerline/fonts">powerline-fonts</a>
+for your system.</p>
+
+<p>See <a href="https://powerline.readthedocs.org/en/master/">Powerline on ReadTheDocs.org</a> for more info.</p>
+
+<pre><code># pip install --user git+git://github.com/powerline/powerline
+if-shell 'test -f ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
+
+# [sudo] pip install git+git://github.com/powerline/powerline
+if-shell 'test -f /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
+
+# [sudo] pip install git+git://github.com/powerline/powerline
+if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
+# using python3.3
+if-shell 'test -f /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf'
+# python 3.4?
+# if-shell 'test -f /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf'
+</code></pre>
+
+<h2>
+<a id="start-tmux" class="anchor" href="#start-tmux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start tmux</h2>
 
 <p>To start a session:</p>
 
@@ -149,7 +144,8 @@
 
 <p><code>&lt;Control + b&gt;:</code> (which could Ctrl-B or Ctrl-A if you overidden it) then <code>source-file ~/.tmux.conf</code></p>
 
-<h2>Commands</h2>
+<h2>
+<a id="commands" class="anchor" href="#commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Commands</h2>
 
 <p>Our prefix/leader key is <code>Control + a</code> now (just like the <code>screen</code> multiplexer). This sequence must be typed before any tmux shortcut.</p>
 
@@ -168,7 +164,9 @@
 <code>Control + a</code> then <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> to move left, down, up, right. Respectively. (vim hjkl)</li>
 <li>
 <code>Control + a</code> then <code>;</code> to go to last panel</li>
-</ul><p>Beyond your first window:</p>
+</ul>
+
+<p>Beyond your first window:</p>
 
 <ul>
 <li>
@@ -181,15 +179,52 @@
 <code>Control + a</code> then <code>[0-9]</code> move to window number</li>
 <li>
 <code>Control + a</code> then <code>&amp;</code> to kill window</li>
-</ul><p>by Tony Narlock (tony@git-pull.com)</p>
+</ul>
+
+<p>Custom:</p>
 
 <ul>
-<li>Github: <a href="http://www.github.com/tony">http://www.github.com/tony</a></li>
-<li>Website: <a href="http://www.git-pull.com">http://www.git-pull.com</a></li>
+<li>
+<code>Control + a</code> then <code>m</code> to switch to <code>main-horizontal</code> layout with the main window at 60% height.</li>
 </ul>
-      </section>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+<h2>
+<a id="more-configs--tools" class="anchor" href="#more-configs--tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>More configs / Tools</h2>
+
+<ul>
+<li>
+<em>Save / Load your tmux workspaces through JSON or YAML</em> with <a href="https://github.com/tony/tmuxp">tmuxp</a>.</li>
+<li>
+<em>Clone + Synchronize your git / hg / svn projects through JSON / YAML</em> with <a href="https://github.com/tony/vcspull">vcspull</a>.</li>
+<li>
+<em>Modular, Lazy-loading vim configuration</em> with support for C, C++, Python, Go and Javascript with <a href="https://github.com/tony/vim-config">tony/vim-config</a>
+</li>
+<li>
+<em>Modular dot-config example</em> <a href="https://github.com/tony/.dot-config">tony/.dot-config</a>
+</li>
+</ul>
+
+<h2>
+<a id="other" class="anchor" href="#other" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other</h2>
+
+<ul>
+<li>Github: <a href="http://www.github.com/tony">http://www.github.com/tony</a>
+</li>
+<li>Website: <a href="http://www.git-pull.com">http://www.git-pull.com</a>
+</li>
+<li>LICENSE: MIT</li>
+<li>Author: Tony Narlock (<a href="mailto:tony@git-pull.com">tony@git-pull.com</a>)</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/tony/tmux-config">Example tmux configuration</a> is maintained by <a href="https://github.com/tony">tony</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
+

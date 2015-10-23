@@ -1,6 +1,6 @@
 [Tmux](http://tmux.sourceforge.net/) is a terminal multiplexer. Tested with tmux 1.5+.
 
-This config has support for [tmux-mem-cpu](http://github.com/thewtex/tmux-mem-cpu-load).
+This config has support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
 
 Prefix mapped to Ctrl-A for `screen` users.
 
@@ -30,7 +30,7 @@ Stats
 
 ### tmux-mem-cpu-load
 
-(Linux-only)
+Works on Linux and OS X.
 
   Prep ourself to download submodule:
 

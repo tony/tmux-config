@@ -1,12 +1,26 @@
+# Author arthurkiller
+# email arthur-lee@qq.com
+# data 2017-1-4
+# this shell is used for initialize the tmux-config
+
 #!/bin/bash
 
 trap exit ERR
-mkdir ~/.tmux
-ln -s ./.tmux-osx.conf  ~/.tmux/.tmux-osx.conf
-ln -s ./.tmux.conf  ~/.tmux/.tmux.conf
-ln -s ./vendor ~/.tmux/vendor
+if [ -d $HOME/.tmux  ]
+then
+    echo .tmux already exist
+    mv $HOME/.tmux $HOME/.tmux.bak
+fi
 
-ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
+if [ -e $HOME/.tmux.conf  ]
+then
+    echo .tmux.conf already exist
+    mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
+    exit 0
+fi
+
+cp -r $HOME/tmux-config $HOME/.tmux
+ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
 
 cd ~/.tmux && git submodule init && git submodule update
 

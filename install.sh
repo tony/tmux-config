@@ -16,7 +16,6 @@ if [ -e $HOME/.tmux.conf  ]
 then
     echo .tmux.conf already exist
     mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
-    exit 0
 fi
 
 cp -r $HOME/tmux-config $HOME/.tmux

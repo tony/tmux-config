@@ -1,8 +1,8 @@
-[tmux](http://tmux.sourceforge.net/) is a terminal multiplexer. Tested with tmux 1.5+.
+[tmux](http://tmux.sourceforge.net/) is a terminal multiplexer.
 
-This config has support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
-
-Prefix mapped to Ctrl-A for `screen` users.
+- Tested with tmux 1.5+.
+- Support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
+- Prefix mapped to Ctrl-A for `screen` users.
 
 New to tmux? Get a copy of my book [*The Tao of tmux*](https://leanpub.com/the-tao-of-tmux) on Leanpub, [Amazon Kindle](http://amzn.to/2gPfRhC) or for free [on the web](https://leanpub.com/the-tao-of-tmux/read).
 
@@ -54,13 +54,19 @@ Change dir to tmux-mem-cpu-load:
 cd ~/.tmux/vendor/tmux-mem-cpu-load
 ```
 
+Make ___build directory and `cd` into it:
+
+```bash
+mkdir build; cd build
+```
+
 General make file:
 
 ```bash
-cmake .
+cmake ..
 ```
 
-Compile our binary:
+Compile binary:
 
 ```bash
 make
@@ -71,6 +77,8 @@ Install our binary to `/usr/local/bin/tmux-mem-cpu-load`:
 ```bash
 sudo make install
 ```
+
+(No need to do `sudo` if on OS X / macOS)
 
 Go home:
 

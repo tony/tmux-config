@@ -1,10 +1,10 @@
-[Tmux](http://tmux.sourceforge.net/) is a terminal multiplexer. Tested with tmux 1.5+.
+[tmux](http://tmux.sourceforge.net/) is a terminal multiplexer. Tested with tmux 1.5+.
 
 This config has support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
 
 Prefix mapped to Ctrl-A for `screen` users.
 
-New to tmux? Order a copy of my book [*The Tao of tmux*](https://leanpub.com/the-tao-of-tmux) on Leanpub, [Amazon Kindle](http://amzn.to/2gPfRhC) or for free [on the web](https://leanpub.com/the-tao-of-tmux/read).
+New to tmux? Get a copy of my book [*The Tao of tmux*](https://leanpub.com/the-tao-of-tmux) on Leanpub, [Amazon Kindle](http://amzn.to/2gPfRhC) or for free [on the web](https://leanpub.com/the-tao-of-tmux/read).
 
 Want more tmux? Check out the [libtmux](https://github.com/tony/libtmux) python library for controlling tmux, and load your code projects via YAML/JSON with [tmuxp](https://github.com/tony/tmuxp).
 
@@ -14,7 +14,7 @@ Installation
   Download:
 
 ```bash
-git clone https://github.com/tony/tmux-config.git ~/.tmux
+git clone --recursive https://github.com/tony/tmux-config.git ~/.tmux
 ```
 
   Copy tmux config to home:
@@ -36,55 +36,56 @@ Stats
 
 Works on Linux and OS X.
 
-  Prep ourself to download submodule:
+Prep ourself to download submodule (if you forgot `--recursive` when cloning):
 
 ```bash
 git submodule init
 ```
 
-  Download submodule:
+Download submodule:
 
 ```bash
 git submodule update
 ```
 
-  Change dir to tmux-mem-cpu-load:
+Change dir to tmux-mem-cpu-load:
 
 ```bash
 cd ~/.tmux/vendor/tmux-mem-cpu-load
 ```
 
-  General make file:
+General make file:
 
 ```bash
 cmake .
 ```
 
-  Compile our binary:
+Compile our binary:
 
 ```bash
 make
 ```
 
-  Install our binary to `/usr/local/bin/tmux-mem-cpu-load`:
+Install our binary to `/usr/local/bin/tmux-mem-cpu-load`:
 
 ```bash
 sudo make install
 ```
 
-  Go home:
+Go home:
 
 ```bash
 cd ~
 ```
 
-  Launch tmux:
+Launch tmux:
+
 ```
 tmux
 ```
-  And press `Control + a` then `d` to go back to the terminal.
+And press `Control + a` then `d` to go back to the terminal.
 
-  Update config:
+Update config:
 
 ```bash
 tmux source-file ~/.tmux.conf
@@ -102,7 +103,7 @@ Install ``psutil``:
 sudo pip install psutil
 ```
 
-copy ``~/.tmux/vendor/basic-cpu-and-memory.tmux`` to bin:
+Copy ``~/.tmux/vendor/basic-cpu-and-memory.tmux`` to bin:
 
 ```bash
 sudo cp ~/.tmux/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load
@@ -130,10 +131,14 @@ if-shell 'test -f /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux
 
 # [sudo] pip install git+git://github.com/powerline/powerline
 if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
-# using python3.3
+# python 3.3 ?
 if-shell 'test -f /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf'
-# python 3.4?
+# python 3.4 ?
 # if-shell 'test -f /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf'
+# python 3.5 ?
+# if-shell 'test -f /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf'
+# python 3.6 ?
+# if-shell 'test -f /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf'
 ```
 
 Start tmux

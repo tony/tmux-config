@@ -4,7 +4,7 @@
 - Support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
 - Prefix mapped to Ctrl-A for `screen` users.
 
-New to tmux? Get a copy of my book [*The Tao of tmux*](https://leanpub.com/the-tao-of-tmux) on Leanpub, [Amazon Kindle](http://amzn.to/2gPfRhC) or for free [on the web](https://leanpub.com/the-tao-of-tmux/read).
+New to tmux? [*The Tao of tmux*](https://leanpub.com/the-tao-of-tmux) is now available on Leanpub and [Amazon Kindle](http://amzn.to/2gPfRhC). Read and browse the book for [on the web](https://leanpub.com/the-tao-of-tmux/read).
 
 Want more tmux? Check out the [libtmux](https://github.com/tony/libtmux) python library for controlling tmux, and load your code projects via YAML/JSON with [tmuxp](https://github.com/tony/tmuxp).
 

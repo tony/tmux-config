@@ -25,7 +25,7 @@
 # Case 3: Resize to a main-horizontal, main pane half width
 # $ ./scripts/resize-adaptable.sh -p 50 -l main-vertical
 #
-# Case 3: Same as Case 3, target "mywindow"
+# Case 4: Same as Case 3, target "mywindow"
 # $ ./scripts/resize-adaptable.sh -p 50 -l main-vertical -t mywindow
 #
 # Author: Tony Narlock

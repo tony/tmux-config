@@ -17,10 +17,11 @@ do
           percentage="$OPTARG";;
     t)    tflag=1
           target="$OPTARG";;
-    ?)   printf "Usage: %s: [-l layout-name] [-p percentage] [-t target]\n" $0
+    ?)   printf "Usage: %s: [-l layout-name] [-p percentage] [-t target-window]\n" $0
           exit 2;;
     esac
 done
+
 if [ ! -z "$tflag" ]; then
     printf "Option -t specified: %s\n" "$target"
 fi
@@ -42,12 +43,19 @@ fi
 
 if [[ $layout_name == 'main-vertical' ]]; then
     MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_width}') \* $percentage \/ 100)
-    tmux setw main-pane-width $MAIN_PANE_SIZE; tmux select-layout main-vertical
+    MAIN_SIZE_OPTION='main-pane-width'
+
 fi
 
 if [[ $layout_name == 'main-horizontal' ]]; then
     MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_height}') \* $percentage \/ 100)
-    tmux setw main-pane-height $MAIN_PANE_SIZE; tmux select-layout main-horizontal
+    MAIN_SIZE_OPTION='main-pane-height'
+fi
+
+if [[ ! -z "$target" ]]; then
+    tmux setw -t $target $MAIN_SIZE_OPTION $MAIN_PANE_SIZE; tmux select-layout -t $target $layout_name
+else
+    tmux setw $MAIN_SIZE_OPTION $MAIN_PANE_SIZE; tmux select-layout $layout_name
 fi
 
 exit 0

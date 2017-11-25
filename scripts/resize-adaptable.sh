@@ -1,5 +1,32 @@
 #!/bin/sh
-# Adaptable tmux resize script
+# Adaptable tmux resize script by percentage
+#
+# Layout types supported (-l):
+#
+# main-horizontal: top pane is main pane, panes split left to right on the bottom
+# main-vertical: left pane is maine pane, right panes split top to bottom on the
+#                right side
+#
+# Options:
+# 
+# -l layout-name (required): the name of the layout, "main-horizontal" or "main-vertical"
+# -p percentage (required): an integer of the percentage of the client width/height to set
+# -t target-window (optional): the tmux target for the window, can be an fnmatch(1) of the
+#                              window name, index, or id
+#
+# Example usage:
+#
+# Case 1: Resize to a main-horizontal, main pane 66% of client height
+# $ ./scripts/resize-adaptable.sh -p 66 -l main-horizontal
+#
+# Case 2: Same as Case 1, target "devel" window
+# $ ./scripts/resize-adaptable.sh -p 66 -l main-horizontal -t devel
+#
+# Case 3: Resize to a main-horizontal, main pane half width
+# $ ./scripts/resize-adaptable.sh -p 50 -l main-vertical
+#
+# Case 3: Same as Case 3, target "mywindow"
+# $ ./scripts/resize-adaptable.sh -p 50 -l main-vertical -t mywindow
 #
 # Author: Tony Narlock
 # Website: https://devel.tech

@@ -187,7 +187,9 @@ Beyond your first window:
 
 Custom:
 
-* `Control + a` then `m` to switch to ``main-horizontal`` layout with the main window at 60% height.
+* `Control + a` then `m` to switch to ``main-horizontal`` layout with the main window at 2/3 height..
+* `Control + a` then `M` to switch to ``main-vertical`` layout with the main window at half width.
+
 
 More configs / Tools
 --------------------

@@ -35,5 +35,14 @@ if [ ! -z "$lflag" ]; then
     fi
 fi
 
-shift $(($OPTIND - 1))
-printf "Remaining arguments are: %s\n" "$*"
+if [[ $layout_name == 'main-vertical' ]]; then
+    MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_width}') / 3 \* 2)
+    tmux setw main-pane-width $MAIN_PANE_SIZE; tmux select-layout main-vertical
+fi
+
+if [[ $layout_name == 'main-horizontal' ]]; then
+    MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_height}') / 3 \* 2)
+    tmux setw main-pane-height $MAIN_PANE_SIZE; tmux select-layout main-horizontal
+fi
+
+exit 0

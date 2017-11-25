@@ -1,4 +1,9 @@
 #!/bin/sh
+# Adaptable tmux resize script
+#
+# Author: Tony Narlock
+# Website: https://devel.tech
+# License: MIT
 
 lflag=
 pflag=
@@ -36,12 +41,12 @@ if [ ! -z "$lflag" ]; then
 fi
 
 if [[ $layout_name == 'main-vertical' ]]; then
-    MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_width}') / 3 \* 2)
+    MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_width}') \* $percentage \/ 100)
     tmux setw main-pane-width $MAIN_PANE_SIZE; tmux select-layout main-vertical
 fi
 
 if [[ $layout_name == 'main-horizontal' ]]; then
-    MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_height}') / 3 \* 2)
+    MAIN_PANE_SIZE=$(expr $(tmux display -p '#{window_height}') \* $percentage \/ 100)
     tmux setw main-pane-height $MAIN_PANE_SIZE; tmux select-layout main-horizontal
 fi
 

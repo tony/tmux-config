@@ -35,7 +35,7 @@
 lflag=
 pflag=
 tflag=
-while getopts l:p:t: name
+while getopts l:p:t: name;
 do
     case $name in
     l)    lflag=1

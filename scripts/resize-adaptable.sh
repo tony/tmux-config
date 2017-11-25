@@ -49,11 +49,7 @@ do
     esac
 done
 
-if [ ! -z "$tflag" ]; then
-    printf "Option -t specified: %s\n" "$target"
-fi
 if [ ! -z "$pflag" ]; then
-    printf "Option -p specified: %s\n" "$percentage"
     intre='^[0-9]+$'
     if ! [[ $percentage =~ $intre ]] ; then
         printf "Percentage (-p) must be an integer" >&2
@@ -61,7 +57,6 @@ if [ ! -z "$pflag" ]; then
     fi
 fi
 if [ ! -z "$lflag" ]; then
-    printf "Option -l specified: %s\n" "$layout_name"
     if [[ $layout_name != 'main-horizontal' ]] && [[ $layout_name != 'main-vertical' ]] ; then
         printf "layout name must be main-horizontal or main-vertical" >&2
         exit 1

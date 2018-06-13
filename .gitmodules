@@ -1,3 +1,0 @@
-[submodule "vendor/tmux-mem-cpu-load"]
-	path = vendor/tmux-mem-cpu-load
-	url = git://github.com/thewtex/tmux-mem-cpu-load.git

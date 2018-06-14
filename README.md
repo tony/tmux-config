@@ -29,30 +29,40 @@ ln -s ~/.my_config/tmux/.tmux.conf ~/.tmux.conf
 You're good to go! The plugin was cloned to `~/.tmux/plugins/` dir and sourced.
 
 
-## Commands
+## Keymaps
 Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
 
 | keymap | desc |
 |--------|------|
 | `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
 | `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
-| `<prefix>` + <kbd>"</kbd> | to split window |
 | `<prefix>` + <kbd>Space></kbd> | to change pane arrangement |
 | `<prefix>` + <kbd>o</kbd> | to rotate panes |
 | `<prefix>` + <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>  | to move left/down/up/right. Respectively. (vim hjkl)
 | `<prefix>` + <kbd>;</kbd> | to go to last panel |
 
-Beyond your first window:
+For session:
 
-* `Control + a` then `c` to create a new window
-* `Control + a` then `n` to next window
-* `Control + a` then `p` to previous window
-* `Control + a` then `[0-9]` move to window number
-* `Control + a` then `&` to kill window
+| keymap | desc |
+|--------|------|
+| `<prefix>` + <kbd>:</kbd>  + type `new` + <kbd>enter</kbd> | new session |
+| `<prefix>` + <kbd>s</kbd> | list sessions |
+| `<prefix>` + <kbd>$</kbd> | name session |
 
-Custom:
+For window:
 
-* `Control + a` then `m` to switch to ``main-horizontal`` layout with the main window at 60% height.
+| keymap | desc |
+|--------|------|
+| `<prefix>` + <kbd>c</kbd> | create a new window |
+| `<prefix>` + <kbd>,</kbd> | rename current window |
+| `<prefix>` + <kbd>n</kbd> | next window |
+| `<prefix>` + <kbd>p</kbd> | previous window |
+| `<prefix>` + <kbd>0</kbd> ~ <kbd>9</kbd> | move to window number `0` ~ `9` |
+| `<prefix>` + <kbd>&</kbd> | kill window |
+| `<prefix>` + <kbd>m</kbd> | switch to `main-horizontal` layout with the main window at 60% height|
+| `<prefix>` + <kbd>-</kbd> | split current window horizontally |
+| `<prefix>` + <kbd>\|</kbd> | split current window vertically |
+
 
 
 ## Other

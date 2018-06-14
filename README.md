@@ -2,7 +2,7 @@
 # Use github to sync tmux config
 **NOTE**: This repo was forked from [tony/tmux-config](https://github.com/tony/tmux-config) and I made adaptation
 - [Tmux](https://github.com/tmux/tmux) version should be higher than 1.5
-- Prefix mapped to `Ctrl-a` for `screen` users
+- `<prefix>` mapped to <kbd>Ctrl</kbd> + <kbd>a</kbd> for `screen` users
 - Use [tpm](https://github.com/tmux-plugins/tpm) to manage tmux plug-in, already integrated:
   - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect): 
   Restore `tmux` environment after system restart
@@ -24,22 +24,23 @@ ln -s ~/.my_config/tmux/.tmux.conf ~/.tmux.conf
 
 ## Start tmux
 1. type `tmux` in terminal
-2. Press `prefix` + <kbd>I</kbd> (capital I, as in **I**nstall) to fetch the plugin.
+2. Press `<prefix>` + <kbd>I</kbd> (capital I, as in **I**nstall) to fetch the plugin.
 
 You're good to go! The plugin was cloned to `~/.tmux/plugins/` dir and sourced.
 
 
 ## Commands
+Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
 
-Our prefix/leader key is `Control + a` now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
-
-* `Control + a` before any command
-* `Control + a` then `?` to bring up list of keyboard shortcuts
-* `Control + a` then `"` to split window
-* `Control + a` then `<Space>` to change pane arrangement
-* `Control + a` then `o` to rotate panes
-* `Control + a` then `h`, `j`, `k`, `l` to move left, down, up, right. Respectively. (vim hjkl)
-* `Control + a` then `;` to go to last panel
+| keymap | desc |
+|--------|------|
+| `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
+| `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
+| `<prefix>` + <kbd>"</kbd> | to split window |
+| `<prefix>` + <kbd>Space></kbd> | to change pane arrangement |
+| `<prefix>` + <kbd>o</kbd> | to rotate panes |
+| `<prefix>` + <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>  | to move left/down/up/right. Respectively. (vim hjkl)
+| `<prefix>` + <kbd>;</kbd> | to go to last panel |
 
 Beyond your first window:
 

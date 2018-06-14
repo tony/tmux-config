@@ -2,7 +2,7 @@
 # Use github to sync tmux config
 **NOTE**: This repo was forked from [tony/tmux-config](https://github.com/tony/tmux-config) and I made adaptation
 - [Tmux](https://github.com/tmux/tmux) version should be higher than 1.5
-- `<prefix>` mapped to <kbd>Ctrl</kbd> + <kbd>a</kbd> for `screen` users
+- `<prefix>` changed to <kbd>Ctrl</kbd> + <kbd>a</kbd> because vim use <kbd>Ctrl</kbd> + <kbd>b</kbd>
 - Use [tpm](https://github.com/tmux-plugins/tpm) to manage tmux plug-in, already integrated:
   - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect): 
   Restore `tmux` environment after system restart

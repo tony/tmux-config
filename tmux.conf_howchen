@@ -12,8 +12,8 @@ set-option -g status-attr default
 set -g @continuum-restore 'on'
 
 # set window split
-bind-key v split-window -h
-bind-key b split-window
+bind-key | split-window -h
+bind-key - split-window
 
 # default window title colors
 set-window-option -g window-status-fg colour244 #base0
@@ -23,7 +23,7 @@ set-window-option -g window-status-attr dim
 # active window title colors
 set-window-option -g window-status-current-fg colour166 #orange
 set-window-option -g window-status-current-bg default
-#set-window-option -g window-status-current-attr bright
+set-window-option -g window-status-current-attr bright
 
 # pane border
 set-option -g pane-border-fg colour235 #base02
@@ -83,17 +83,17 @@ bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
 #bind-key -t vi-copy 'y' copy-selection
 
 # hjkl pane traversal
-#bind h select-pane -L
-#bind j select-pane -D
-#bind k select-pane -U
-#bind l select-pane -R
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
 
 
 # switch panes using Alt-arrow without prefix
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
+#bind -n M-Left select-pane -L
+#bind -n M-Right select-pane -R
+#bind -n M-Up select-pane -U
+#bind -n M-Down select-pane -D
 
 # set to main-horizontal, 60% height for main pane
 bind m set-window-option main-pane-height 60\; select-layout main-horizontal

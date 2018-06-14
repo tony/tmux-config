@@ -1,3 +1,5 @@
+
+# Use github to sync tmux config
 **NOTE**: This repo was forked from [tony/tmux-config](https://github.com/tony/tmux-config) and I made adaptation
 - [Tmux](https://github.com/tmux/tmux) version should be higher than 1.5
 - Prefix mapped to `Ctrl-a` for `screen` users
@@ -9,31 +11,25 @@
   - [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load): 
   A simple, lightweight program provided for system monitoring in the status line of `tmux`
 
-Installation
-------------
-
-  Download:
-
+## Installation
+Download:
 ```bash
 git clone https://github.com/howhow/tmux-config ~/.my_config/tmux
 ```
 
-  Copy tmux config to home:
-
+Copy tmux config to home:
 ```bash
 ln -s ~/.my_config/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-Start tmux
-----------
+## Start tmux
+1. type `tmux` in terminal
+2. Press `prefix` + <kbd>I</kbd> (capital I, as in **I**nstall) to fetch the plugin.
 
-To start a session:
-
-`tmux`
+You're good to go! The plugin was cloned to `~/.tmux/plugins/` dir and sourced.
 
 
-Commands
---------
+## Commands
 
 Our prefix/leader key is `Control + a` now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
 
@@ -58,6 +54,5 @@ Custom:
 * `Control + a` then `m` to switch to ``main-horizontal`` layout with the main window at 60% height.
 
 
-Other
------
+## Other
 * LICENSE: MIT

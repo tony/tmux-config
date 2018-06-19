@@ -50,19 +50,10 @@ tmux kill-session -t <session_name>
 tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
 ```
 
-## Keymaps in the tmux
-Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the [screen](https://www.gnu.org/software/screen/) multiplexer). This sequence must be typed before any tmux shortcut. Some keymaps are customized.
+## Keymaps in this `tmux.config`
+Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the [screen](https://www.gnu.org/software/screen/) multiplexer). This sequence must be typed before any tmux shortcut. Some keymaps are customized, use `<prefix>` + <kbd>?</kbd> to bring up list of keyboard shortcuts
 
-| keymap | desc |
-|--------|------|
-| `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
-| `<prefix>` + <kbd>Space></kbd> | to change pane arrangement |
-| `<prefix>` + <kbd>o</kbd> | to rotate panes |
-| `<prefix>` + <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>  | to move left/down/up/right. Respectively. (vim hjkl)
-| `<prefix>` + <kbd>;</kbd> | to go to last panel |
-
-For session:
-
+### For session
 | keymap | desc |
 |--------|------|
 | `<prefix>` + <kbd>:</kbd>  + type `new` + <kbd>enter</kbd> | new session |
@@ -70,19 +61,38 @@ For session:
 | `<prefix>` + <kbd>$</kbd> | name session |
 | `<prefix>` + <kbd>d</kbd> | de-attach from session |
 
-For window:
-
+### For window
 | keymap | desc |
 |--------|------|
+| `<prefix>` + <kbd>w</kbd> | list window |
 | `<prefix>` + <kbd>c</kbd> | create a new window |
 | `<prefix>` + <kbd>,</kbd> | rename current window |
 | `<prefix>` + <kbd>n</kbd> | next window |
 | `<prefix>` + <kbd>p</kbd> | previous window |
+| `<prefix>` + <kbd>f</kbd> | find window |
 | `<prefix>` + <kbd>0</kbd> ~ <kbd>9</kbd> | move to window number `0` ~ `9` |
 | `<prefix>` + <kbd>&</kbd> | kill window |
-| `<prefix>` + <kbd>m</kbd> | switch to `main-horizontal` layout with the main window at 60% height|
+
+### For panel
+| keymap | desc |
+|--------|------|
 | `<prefix>` + <kbd>-</kbd> | split current window horizontally |
 | `<prefix>` + <kbd>\|</kbd> | split current window vertically |
+| `<prefix>` + <kbd>q</kbd> | show panel number |
+| `<prefix>` + <kbd>x</kbd> | kill a panel |
+| `<prefix>` + <kbd>Space></kbd> | to change pane arrangement |
+| `<prefix>` + <kbd>o</kbd> | to rotate panes |
+| `<prefix>` + <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>  | to move left/down/up/right. Respectively. (vim hjkl)
+| `<prefix>` + <kbd>;</kbd> | to go to last panel |
+
+### Copy-paste mode work flow
+1. enter copy mode by `<prefix>` + <kbd>[</kbd> or scroll the mouse
+2. move around text via <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>
+3. press <kbd>v</kbd> to start select word
+4. <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd> or other `vi` key-bind to select, like <kbd>e</kbd>
+5. <kbd>y</kbd> to yank
+6. exit copy mode by press <kbd>q</kbd>
+7. `<prefix>` + <kbd>P</kbd> to paste
 
 ## Other
 * LICENSE: MIT

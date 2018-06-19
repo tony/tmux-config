@@ -56,7 +56,6 @@ Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the `scre
 | keymap | desc |
 |--------|------|
 | `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
-| `<prefix>` + <kbd>?</kbd> | bring up list of keyboard shortcuts |
 | `<prefix>` + <kbd>Space></kbd> | to change pane arrangement |
 | `<prefix>` + <kbd>o</kbd> | to rotate panes |
 | `<prefix>` + <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd>  | to move left/down/up/right. Respectively. (vim hjkl)

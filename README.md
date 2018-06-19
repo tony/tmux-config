@@ -28,9 +28,30 @@ ln -s ~/.my_config/tmux/.tmux.conf ~/.tmux.conf
 
 You're good to go! The plugin was cloned to `~/.tmux/plugins/` dir and sourced.
 
+## Basic usage
+1. list all session
+```bash
+tmux ls
+```
+2. create a new session
+```bash
+tmux new -s <session_name>
+```
+3. attach to a session
+```bash
+tmux attch -t <session_name>
+```
+4. kill a session
+```bash
+tmux kill-session -t <session_name>
+```
+5. kill all session
+```bash
+tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+```
 
-## Keymaps
-Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
+## Keymaps in the tmux
+Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut. Some keymaps are customized.
 
 | keymap | desc |
 |--------|------|
@@ -48,6 +69,7 @@ For session:
 | `<prefix>` + <kbd>:</kbd>  + type `new` + <kbd>enter</kbd> | new session |
 | `<prefix>` + <kbd>s</kbd> | list sessions |
 | `<prefix>` + <kbd>$</kbd> | name session |
+| `<prefix>` + <kbd>d</kbd> | de-attach from session |
 
 For window:
 
@@ -62,8 +84,6 @@ For window:
 | `<prefix>` + <kbd>m</kbd> | switch to `main-horizontal` layout with the main window at 60% height|
 | `<prefix>` + <kbd>-</kbd> | split current window horizontally |
 | `<prefix>` + <kbd>\|</kbd> | split current window vertically |
-
-
 
 ## Other
 * LICENSE: MIT

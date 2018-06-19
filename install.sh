@@ -1,28 +1,26 @@
-# Author arthurkiller
-# email arthur-lee@qq.com
-# data 2017-1-4
+#####################################################
+# file name:    tmux.conf_howchen
+# author:       chenhow1985<at>gmail<dot>com
+#
 # this shell is used for initialize the tmux-config
+#####################################################
 
 #!/bin/bash
 
 trap exit ERR
-if [ -d $HOME/.tmux  ]
+if [ -d ~/.tmux  ]
 then
-    echo .tmux already exist
-    mv $HOME/.tmux $HOME/.tmux.bak
+    echo ".tmux already exist, backup it"
+    mv ~/.tmux ~/.tmux.bak
 fi
 
-if [ -e $HOME/.tmux.conf  ]
+if [ -e ~/.tmux.conf  ]
 then
-    echo .tmux.conf already exist
-    mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
+    echo ".tmux.conf already exist, backup it"
+    mv ~/.tmux.conf ~/.tmux.conf.bak
 fi
 
-cp -r $HOME/tmux-config $HOME/.tmux
-ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
-
-cd ~/.tmux && git submodule init && git submodule update
-
-cd ~/.tmux/vendor/tmux-mem-cpu-load && cmake . && make && sudo make install
+ln -s ~/.tmux.conf ~/.my_config/tmux/tmux.conf_howchen
 
 tmux source-file ~/.tmux.conf
+

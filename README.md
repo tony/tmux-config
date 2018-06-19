@@ -2,7 +2,7 @@
 # Use github to sync tmux config
 **NOTE**: This repo was forked from [tony/tmux-config](https://github.com/tony/tmux-config) and I made adaptation
 - [Tmux](https://github.com/tmux/tmux) version should be higher than 1.5
-- `<prefix>` changed to <kbd>Ctrl</kbd> + <kbd>a</kbd> because vim use <kbd>Ctrl</kbd> + <kbd>b</kbd>
+- `<prefix>` changed to <kbd>Ctrl</kbd> + <kbd>a</kbd> (because vim use <kbd>Ctrl</kbd> + <kbd>b</kbd>)
 - Use [tpm](https://github.com/tmux-plugins/tpm) to manage tmux plug-in, already integrated:
   - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect): 
   Restore `tmux` environment after system restart
@@ -51,7 +51,7 @@ tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xar
 ```
 
 ## Keymaps in the tmux
-Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut. Some keymaps are customized.
+Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the [screen](https://www.gnu.org/software/screen/) multiplexer). This sequence must be typed before any tmux shortcut. Some keymaps are customized.
 
 | keymap | desc |
 |--------|------|

@@ -20,7 +20,7 @@ then
     mv ~/.tmux.conf ~/.tmux.conf.bak
 fi
 
-ln -s ~/.tmux.conf ~/.my_config/tmux/tmux.conf_howchen
+ln -s ~/.tmux.conf ~/.my_config/tmux/tmux.conf
 
 tmux source-file ~/.tmux.conf
 

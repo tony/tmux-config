@@ -13,6 +13,7 @@ then
     echo ".tmux already exist, backup it"
     mv ~/.tmux ~/.tmux.bak
 fi
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ -e ~/.tmux.conf  ]
 then

@@ -29,7 +29,7 @@ ln -s ~/.my_config/tmux/tmux.conf ~/.tmux.conf
 
 ## Start tmux
 1. type `tmux` in terminal
-2. Press `<prefix>` + <kbd>I</kbd> (capital I, as in **I**nstall) to fetch the plugin.
+2. Press `<prefix>` + <kbd>I</kbd> (**capital** <kbd>I</kbd>, as in **I**nstall) to fetch the plugin.
 
 You're good to go! The plugin was cloned to `~/.tmux/plugins/` dir and sourced.
 
@@ -102,7 +102,7 @@ Our prefix/leader key is <kbd>Ctrl</kbd> + <kbd>a</kbd> now (just like the [scre
 4. <kbd>h</kbd>/<kbd>j</kbd>/<kbd>k</kbd>/<kbd>l</kbd> or other `vi` key-bind to select, like <kbd>e</kbd>
 5. <kbd>y</kbd> to yank
 6. exit copy mode by press <kbd>q</kbd>
-7. `<prefix>` + <kbd>P</kbd> to paste
+7. `<prefix>` + <kbd>P</kbd> to paste (**capital** <kbd>P</kbd>)
 
 ## Other
 * LICENSE: MIT

@@ -11,7 +11,7 @@
   - [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load): 
   A simple, lightweight program provided for system monitoring in the status line of `tmux`
 
-## Installation
+## Download & Installation
 Download:
 ```bash
 git clone https://github.com/howhow/tmux-config ~/.my_config/tmux
@@ -22,7 +22,7 @@ Download tpm:
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-Copy tmux config to home:
+Link tmux config to home:
 ```bash
 ln -s ~/.my_config/tmux/tmux.conf ~/.tmux.conf
 ```
@@ -34,6 +34,11 @@ ln -s ~/.my_config/tmux/tmux.conf ~/.tmux.conf
 You're good to go! The plugin was cloned to `~/.tmux/plugins/` dir and sourced.
 
 ## Basic usage
+0. pass color option to xterm, set tmux in `alias`
+```bash
+tmux='TERM=xterm-256color /usr/local/bin'
+```
+
 1. list all session
 ```bash
 tmux ls

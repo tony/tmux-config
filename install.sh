@@ -7,7 +7,6 @@
 
 #!/bin/bash
 
-trap exit ERR
 if [ -d ~/.tmux  ]
 then
     echo ".tmux already exist, backup it"
@@ -21,7 +20,7 @@ then
     mv ~/.tmux.conf ~/.tmux.conf.bak
 fi
 
-ln -s ~/.tmux.conf ~/.my_config/tmux/tmux.conf
+ln -s ~/.my_config/tmux/tmux.conf ~/.tmux.conf
 
 tmux source-file ~/.tmux.conf
 

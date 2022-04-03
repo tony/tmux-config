@@ -12,6 +12,11 @@ Want more tmux? Check out the [libtmux](https://github.com/tony/libtmux) python 
 controlling tmux, and load your code projects via YAML/JSON with
 [tmuxp](https://github.com/tony/tmuxp).
 
+## Share your .dot-configs
+
+Have a tmux configuration you'd like to share? Whether a fork of this project, another's, or your
+own, submit it to [awesome-tmux-configs](https://github.com/tony/awesome-tmux-configs).
+
 ## Installation
 
 Download:

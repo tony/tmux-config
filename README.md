@@ -4,33 +4,35 @@
 - Support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
 - Prefix mapped to Ctrl-A for `screen` users.
 
-New to tmux? [*The Tao of tmux*](https://leanpub.com/the-tao-of-tmux) is now available on Leanpub and [Amazon Kindle](http://amzn.to/2gPfRhC). Read and browse the book for [on the web](https://leanpub.com/the-tao-of-tmux/read).
+New to tmux? [_The Tao of tmux_](https://leanpub.com/the-tao-of-tmux) is now available on Leanpub
+and [Amazon Kindle](http://amzn.to/2gPfRhC). Read and browse the book for
+[on the web](https://leanpub.com/the-tao-of-tmux/read).
 
-Want more tmux? Check out the [libtmux](https://github.com/tony/libtmux) python library for controlling tmux, and load your code projects via YAML/JSON with [tmuxp](https://github.com/tony/tmuxp).
+Want more tmux? Check out the [libtmux](https://github.com/tony/libtmux) python library for
+controlling tmux, and load your code projects via YAML/JSON with
+[tmuxp](https://github.com/tony/tmuxp).
 
-Installation
-------------
+## Installation
 
-  Download:
+Download:
 
 ```bash
 git clone --recursive https://github.com/tony/tmux-config.git ~/.tmux
 ```
 
-  Copy tmux config to home:
+Copy tmux config to home:
 
 ```bash
 ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 ```
 
-  Go to config dir:
+Go to config dir:
 
 ```bash
 cd ~/.tmux
 ```
 
-Stats
------
+## Stats
 
 ### tmux-mem-cpu-load
 
@@ -54,10 +56,10 @@ Change dir to tmux-mem-cpu-load:
 cd ~/.tmux/vendor/tmux-mem-cpu-load
 ```
 
-Make ___build directory and `cd` into it:
+Make `_build` directory and `cd` into it:
 
 ```bash
-mkdir build; cd build
+mkdir _build; cd _build
 ```
 
 General make file:
@@ -91,6 +93,7 @@ Launch tmux:
 ```
 tmux
 ```
+
 And press `Control + a` then `d` to go back to the terminal.
 
 Update config:
@@ -105,27 +108,28 @@ tmux source-file ~/.tmux.conf
 
 Update March 19, 2014. Works with psutil 2.0 now.
 
-Install ``psutil``:
+Install `psutil`:
 
 ```bash
 sudo pip install psutil
 ```
 
-Copy ``~/.tmux/vendor/basic-cpu-and-memory.tmux`` to bin:
+Copy `~/.tmux/vendor/basic-cpu-and-memory.tmux` to bin:
 
 ```bash
 sudo cp ~/.tmux/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load
 ```
 
 make executable:
+
 ```bash
 sudo chmod +x /usr/local/bin/tmux-mem-cpu-load
 ```
 
 ### Powerline (Advanced)
 
-You can add suport for [powerline](https://github.com/powerline/powerline) by adding these
-to your ``~/.tmux.conf``. Be sure to grab and install [powerline-fonts](https://github.com/powerline/fonts)
+You can add suport for [powerline](https://github.com/powerline/powerline) by adding these to your
+`~/.tmux.conf`. Be sure to grab and install [powerline-fonts](https://github.com/powerline/fonts)
 for your system.
 
 See [Powerline on ReadTheDocs.org](https://powerline.readthedocs.org/en/master/) for more info.
@@ -149,8 +153,7 @@ if-shell 'test -f /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux
 # if-shell 'test -f /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf'
 ```
 
-Start tmux
-----------
+## Start tmux
 
 To start a session:
 
@@ -164,45 +167,45 @@ To reload config file
 
 `<Control + b>:` (which could Ctrl-B or Ctrl-A if you overidden it) then `source-file ~/.tmux.conf`
 
-Commands
---------
+## Commands
 
-Our prefix/leader key is `Control + a` now (just like the `screen` multiplexer). This sequence must be typed before any tmux shortcut.
+Our prefix/leader key is `Control + a` now (just like the `screen` multiplexer). This sequence must
+be typed before any tmux shortcut.
 
-* `Control + a` before any command
-* `Control + a` then `?` to bring up list of keyboard shortcuts
-* `Control + a` then `"` to split window
-* `Control + a` then `<Space>` to change pane arrangement
-* `Control + a` then `o` to rotate panes
-* `Control + a` then `h`, `j`, `k`, `l` to move left, down, up, right. Respectively. (vim hjkl)
-* `Control + a` then `;` to go to last panel
+- `Control + a` before any command
+- `Control + a` then `?` to bring up list of keyboard shortcuts
+- `Control + a` then `"` to split window
+- `Control + a` then `<Space>` to change pane arrangement
+- `Control + a` then `o` to rotate panes
+- `Control + a` then `h`, `j`, `k`, `l` to move left, down, up, right. Respectively. (vim hjkl)
+- `Control + a` then `;` to go to last panel
 
 Beyond your first window:
 
-* `Control + a` then `c` to create a new window
-* `Control + a` then `n` to next window
-* `Control + a` then `p` to previous window
-* `Control + a` then `[0-9]` move to window number
-* `Control + a` then `&` to kill window
+- `Control + a` then `c` to create a new window
+- `Control + a` then `n` to next window
+- `Control + a` then `p` to previous window
+- `Control + a` then `[0-9]` move to window number
+- `Control + a` then `&` to kill window
 
 Custom:
 
-* `Control + a` then `m` to switch to ``main-horizontal`` layout with the main window at 2/3 height..
-* `Control + a` then `M` to switch to ``main-vertical`` layout with the main window at half width.
+- `Control + a` then `m` to switch to `main-horizontal` layout with the main window at 2/3 height..
+- `Control + a` then `M` to switch to `main-vertical` layout with the main window at half width.
 
+## More configs / Tools
 
-More configs / Tools
---------------------
+- _Save / Load your tmux workspaces through JSON or YAML_ with
+  [tmuxp](https://github.com/tony/tmuxp).
+- _Clone + Synchronize your git / hg / svn projects through JSON / YAML_ with
+  [vcspull](https://github.com/tony/vcspull).
+- _Modular, Lazy-loading vim configuration_ with support for C, C++, Python, Go and Javascript with
+  [tony/vim-config](https://github.com/tony/vim-config)
+- _Modular dot-config example_ [tony/.dot-config](https://github.com/tony/.dot-config)
 
-* *Save / Load your tmux workspaces through JSON or YAML* with [tmuxp](https://github.com/tony/tmuxp).
-* *Clone + Synchronize your git / hg / svn projects through JSON / YAML* with [vcspull](https://github.com/tony/vcspull).
-* *Modular, Lazy-loading vim configuration* with support for C, C++, Python, Go and Javascript with [tony/vim-config](https://github.com/tony/vim-config)
-* *Modular dot-config example* [tony/.dot-config](https://github.com/tony/.dot-config)
+## Other
 
-Other
------
-
-* Github: http://www.github.com/tony
-* Website: http://www.git-pull.com
-* LICENSE: MIT
-* Author: Tony Narlock (tony@git-pull.com)
+- Github: http://www.github.com/tony
+- Website: http://www.git-pull.com
+- LICENSE: MIT
+- Author: Tony Narlock (tony@git-pull.com)

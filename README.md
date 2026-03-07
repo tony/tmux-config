@@ -1,6 +1,6 @@
 [tmux](https://github.com/tmux/tmux) is a terminal multiplexer.
 
-- Requires tmux 3.4+.
+- Requires tmux 3.2+ (best experience on 3.4+).
 - Support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
 - Prefix mapped to Ctrl-A for `screen` users.
 
@@ -155,8 +155,8 @@ Custom:
 
 - `Control + a` then `m` to switch to `main-horizontal` layout with the main pane at 66% height.
 - `Control + a` then `M` to switch to `main-vertical` layout with the main pane at 50% width.
-- `Control + a` then `t` to open a popup shell (80% of screen).
-- `Control + a` then `g` to open a popup with `git log --oneline --graph`.
+- `Control + a` then `t` to open a popup shell (80% of screen, 3.2+).
+- `Control + a` then `g` to open a popup with `git log --oneline --graph` (3.2+).
 
 ## More configs / Tools
 

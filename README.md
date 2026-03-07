@@ -1,6 +1,6 @@
-[tmux](http://tmux.sourceforge.net/) is a terminal multiplexer.
+[tmux](https://github.com/tmux/tmux) is a terminal multiplexer.
 
-- Tested with tmux 1.5+.
+- Requires tmux 3.4+.
 - Support for [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load).
 - Prefix mapped to Ctrl-A for `screen` users.
 
@@ -107,30 +107,6 @@ Update config:
 tmux source-file ~/.tmux.conf
 ```
 
-### basic-cpu-and-memory.tmux
-
-(Cross platform, tested with python 2.7+)
-
-Update March 19, 2014. Works with psutil 2.0 now.
-
-Install `psutil`:
-
-```bash
-sudo pip install psutil
-```
-
-Copy `~/.tmux/vendor/basic-cpu-and-memory.tmux` to bin:
-
-```bash
-sudo cp ~/.tmux/vendor/basic-cpu-and-memory.tmux /usr/local/bin/tmux-mem-cpu-load
-```
-
-make executable:
-
-```bash
-sudo chmod +x /usr/local/bin/tmux-mem-cpu-load
-```
-
 ### Powerline (Advanced)
 
 You can add suport for [powerline](https://github.com/powerline/powerline) by adding these to your
@@ -138,25 +114,6 @@ You can add suport for [powerline](https://github.com/powerline/powerline) by ad
 for your system.
 
 See [Powerline on ReadTheDocs.org](https://powerline.readthedocs.org/en/master/) for more info.
-
-```
-# pip install --user git+git://github.com/powerline/powerline
-if-shell 'test -f ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
-
-# [sudo] pip install git+git://github.com/powerline/powerline
-if-shell 'test -f /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
-
-# [sudo] pip install git+git://github.com/powerline/powerline
-if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
-# python 3.3 ?
-if-shell 'test -f /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf'
-# python 3.4 ?
-# if-shell 'test -f /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.4/dist-packages/powerline/bindings/tmux/powerline.conf'
-# python 3.5 ?
-# if-shell 'test -f /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.5/dist-packages/powerline/bindings/tmux/powerline.conf'
-# python 3.6 ?
-# if-shell 'test -f /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf'
-```
 
 ## Start tmux
 
@@ -170,7 +127,7 @@ To reattach a previous session:
 
 To reload config file
 
-`<Control + b>:` (which could Ctrl-B or Ctrl-A if you overidden it) then `source-file ~/.tmux.conf`
+`<Control + a>:` then `source-file ~/.tmux.conf`
 
 ## Commands
 
@@ -178,11 +135,12 @@ Our prefix/leader key is `Control + a` now (just like the `screen` multiplexer).
 be typed before any tmux shortcut.
 
 - `Control + a` before any command
-- `Control + a` then `?` to bring up list of keyboard shortcuts
-- `Control + a` then `"` to split window
-- `Control + a` then `<Space>` to change pane arrangement
+- `Control + a` then `?` to bring up list of keyboard shortcuts (with descriptions)
+- `Control + a` then `"` to split window horizontally
+- `Control + a` then `v` to split window vertically
+- `Control + a` then `<Space>` to open quick-action menu
 - `Control + a` then `o` to rotate panes
-- `Control + a` then `h`, `j`, `k`, `l` to move left, down, up, right. Respectively. (vim hjkl)
+- `Control + a` then `h`, `j`, `k`, `l` to move left, down, up, right (vim hjkl)
 - `Control + a` then `;` to go to last panel
 
 Beyond your first window:
@@ -195,8 +153,10 @@ Beyond your first window:
 
 Custom:
 
-- `Control + a` then `m` to switch to `main-horizontal` layout with the main window at 2/3 height..
-- `Control + a` then `M` to switch to `main-vertical` layout with the main window at half width.
+- `Control + a` then `m` to switch to `main-horizontal` layout with the main pane at 66% height.
+- `Control + a` then `M` to switch to `main-vertical` layout with the main pane at 50% width.
+- `Control + a` then `t` to open a popup shell (80% of screen).
+- `Control + a` then `g` to open a popup with `git log --oneline --graph`.
 
 ## More configs / Tools
 
